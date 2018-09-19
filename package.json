@@ -1,0 +1,10 @@
+{
+  "name": "parallax-puppeteer-try",
+  "version": "0.1.0",
+  "description": "A small project to try learning parallax and puppeteer in details",
+  "main": "index.js",
+  "repository": "https://github.com/htbkoo/parallax-puppeteer-try.git",
+  "author": "htbkoo",
+  "license": "UNLICENSED",
+  "private": true
+}
