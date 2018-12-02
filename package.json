@@ -1,10 +1,28 @@
 {
-  "name": "parallax-puppeteer-try",
+  "name": "pwa-parallax-puppeteer-try",
   "version": "0.1.0",
-  "description": "A small project to try learning parallax and puppeteer in details",
+  "description": "A small project to try learning progressiveWebApp (PWA) parallax and puppeteer in details",
   "main": "index.js",
-  "repository": "https://github.com/htbkoo/parallax-puppeteer-try.git",
+  "repository": "https://github.com/htbkoo/pwa-parallax-puppeteer-try.git",
   "author": "htbkoo",
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.11",
+    "@types/react": "^16.7.11",
+    "@types/react-dom": "^16.0.11",
+    "typescript": "^3.2.1"
+  }
 }
