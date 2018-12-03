@@ -5,16 +5,25 @@ import './App.css';
 
 import logo from './logo.svg';
 
+function getHeightStyle(height?: number) {
+    if (height) {
+        return {height: `${height}px`};
+    } else {
+        return {};
+    }
+}
+
+const TextDiv = ({height, children}: { height?: number, children?: React.ReactNode }) => (
+    <div style={getHeightStyle(height)}>{children}</div>
+);
+
 class App extends React.Component {
     public render() {
         return (
             <div className="App">
-                <div style={{height: '1000px'}}>
-                    Scroll down......
-                </div>
-                <div style={{height: '1000px'}}>
-                    Keep scrolling down......
-                </div>
+                <TextDiv height={1000}>Scroll down......</TextDiv>
+                <TextDiv height={1000}/>
+                <TextDiv height={1000}>Keep scrolling down......</TextDiv>
 
                 <Parallax
                     blur={10}
@@ -24,10 +33,10 @@ class App extends React.Component {
                 >
                     Put some text content here - even an empty div with fixed dimensions to have a height
                     for the parallax.
-                    <div style={{height: '100px'}}/>
+                    <TextDiv height={100}/>
                 </Parallax>
 
-                <div style={{height: '200px'}}/>
+                <TextDiv height={200}/>
 
                 {/* -----dynamic blur-----*/}
                 <Parallax
@@ -37,30 +46,26 @@ class App extends React.Component {
                     strength={-200}
                 >
                     Blur transition from min to max
-                    <div style={{height: '200px'}}/>
+                    <TextDiv height={200}/>
                 </Parallax>
 
-                <div style={{height: '200px'}}/>
-
+                <TextDiv height={200}/>
 
                 {/* -----custom background element-----*/}
                 <Parallax strength={300}>
                     <div>Use the background component for custom elements</div>
-                    <div style={{height: '200px'}}/>
+                    <TextDiv height={200}/>
                     <Background className="custom-bg">
                         <img src="http://www.fillmurray.com/500/320" alt="fill murray"/>
                     </Background>
                 </Parallax>
 
-                <div style={{height: '200px'}}/>
+                <TextDiv height={200}/>
 
+                <TextDiv height={600}>Scroll until the end......</TextDiv>
 
-                <div style={{height: '600px'}}>
-                    Scroll until the end......
-                </div>
-
-                <div style={{height: '200px'}}/>
-                <div style={{height: '200px'}}>Thanks</div>
+                <TextDiv height={200}/>
+                <TextDiv height={200}>Thanks</TextDiv>
             </div>
         );
     }
